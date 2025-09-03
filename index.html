@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <script src="./script/script.js"></script>
-    <title>To-Do Lists</title>
+    <title>To-Do List</title>
   </head>
   <body>
-    
+    <header>
+      <h1>Minha To-Do List</h1>
+    </header>
+    <main>
+      <form id="task-form">
+        <input type="text" name="text" id="task-input" placeholder="O que precisa ser feito?">
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <ul id="task-list">
+      </ul>
+
+      <button type="submit" id="clear-all-btn">Limpar Tudo</button>
+    </main>
+    <footer>
+      <p>Criado por <strong>Livia Mota.</strong></p>
+      <p>&copy; Todos os direitos reservados.</p>
+    </footer>
+    <script src="./script/script.js"></script>
   </body>
 </html>

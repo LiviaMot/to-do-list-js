@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #343A40;
+  color: #F8F9FA;
+  font-family: "Chiron GoRound TC", sans-serif;
+}
+
+/* --- CABEÇALHO E RODAPÉ --- */
+header, footer {
+  background-color: #212529;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 2.7rem;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+footer strong {
+  font-weight: 600;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+  flex: 1; /* Faz o conteúdo principal crescer e empurrar o footer para baixo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+/* --- FORMULÁRIO DE ADICIONAR TAREFA --- */
+#task-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+#task-input {
+  flex: 1; /* Faz o input ocupar o máximo de espaço possível */
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #495057;
+  border-radius: 8px;
+  background-color: #495057;
+  color: #F8F9FA;
+  font-family: "Chiron GoRound TC", sans-serif;
+}
+
+#task-form button {
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #E67E22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#task-form button:hover {
+  background-color: #d35400;
+}
+
+#clear-all-btn {
+  margin-top: 20px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #E67E22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#clear-all-btn:hover {
+  background-color: #d35400;
+}
+
+/* --- LISTA DE TAREFAS --- */
+#task-list {
+  list-style: none;
+  width: 100%;
+  max-width: 600px;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #495057;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+}
+
+/* Estilo para o texto da tarefa (o <span>) */
+#task-list li span {
+  cursor: pointer;
+  flex: 1;
+  padding: 0 10px;
+}
+
+/* Estilo do "check" customizado */
+#task-list li::before {
+  content: '☐'; /* Quadrado vazio como padrão */
+  font-size: 1.5rem;
+  color: #E67E22;
+  cursor: pointer;
+}
+
+/* Quando a tarefa está completa */
+#task-list li.completed {
+  background-color: #212529;
+}
+
+#task-list li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+#task-list li.completed::before {
+  content: '☑'; /* Quadrado com check quando completa */
+}
+
+/* Botão de deletar tarefa */
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  color: #adb5bd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #E67E22;
+  color: white;
+}
